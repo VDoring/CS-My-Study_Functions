@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CS_StudyLog
 {
@@ -117,10 +113,69 @@ namespace CS_StudyLog
             Console.WriteLine("당신은 방금 " + Readarr + "를 입력했습니다.");
 
 
+            var aa = 20;
+            var bb = 2.71;
+            var cc = 'p';
+            var dd = "Daylight";
+
+            int integer_a = (int)bb;
+            Console.WriteLine(integer_a);
+
+            string testString = "123";
+            int.Parse(testString); //만약 testString에 "abc"같은 문자가 저장될경우 에러가 발생한다.
+            Console.WriteLine(testString); //숫자(형)으로 바꼈다.
+
+            int _pi = 314;
+            string _pistr = (_pi).ToString();
+            Console.WriteLine(_pistr);
+
+            int aaa = 8, bbb = 5;
+            bool ccc = aaa < bbb;
+            Console.WriteLine(ccc); //FALSE 출력
+
+            bool a_bool = true;
+            bool b_bool = false;
+            Console.WriteLine(a_bool && b_bool); //a와 b가 참이다를 만족하지 않음. FALSE
+            Console.WriteLine(a_bool && !b_bool); //a와 b가 참이다를 만족하므로 TRUE
+            Console.WriteLine(a_bool || b_bool); //a 또는 b중 참이다를 만족하므로 TRUE
+
+            int score = Convert.ToInt32(Console.ReadLine());
+            if (score == 100) Console.WriteLine("100점 축하");
+            else if (score >= 90) Console.WriteLine("90점 이상 축하");
+            else if (score >= 80 && score < 90) Console.WriteLine("80점 이상 일단 축하");
+            else Console.WriteLine("노력해");
+
+            for(int i = 1; i <= 9; i++)
+            {
+                for (int j = 1; j <= 9; j++)
+                {
+                    Console.WriteLine(i+ "x" + j + "=" + i*j);
+                }
+            }
+
+            string BloodType = Console.ReadLine();
+            switch(BloodType)
+            {
+                case "A":
+                    Console.WriteLine("A형, O형에게 수혈받을 수 있음");
+                    break;
+                case "B":
+                    Console.WriteLine("B형, O형에게 수혈받을 수 있음");
+                    break;
+                case "AB":
+                    Console.WriteLine("모든 혈액형 수혈가능");
+                    break;
+                case "O":
+                    Console.WriteLine("O형에게 수혈가능");
+                    break;
+                default:
+                    Console.WriteLine("혈액형을 대문자로 입력해");
+                    break;
+            }
 
         }
     }
 }
 
-// http://blog.naver.com/PostView.nhn?blogId=einsbon&logNo=221012713777&parentCategoryNo=&categoryNo=15&viewDate=&isShowPopularPosts=false&from=postList
+// http://blog.naver.com/PostView.nhn?blogId=einsbon&logNo=221133419991&parentCategoryNo=&categoryNo=15&viewDate=&isShowPopularPosts=false&from=postList
 // 이후 여기서부터 진행
